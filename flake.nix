@@ -21,7 +21,7 @@
             (pkgs.neovim.override {
               configure = {
                 customRC = ''
-                  lua require("fcitx5").setup_autocmds()
+                  lua require("fcitx5").setup()
                 '';
                 packages.myVimPackage.start = [ self.packages.${system}.fcitx5-nvim ];
               };

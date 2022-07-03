@@ -16,7 +16,7 @@ function M.inactivate()
 	remote_exec("-c")
 end
 
-function M.setup_autocmds()
+function M.setup()
 	local group = vim.api.nvim_create_augroup("fcitx5_nvim", {})
 	vim.api.nvim_create_autocmd({ "InsertLeave", "CmdlineLeave" }, {
 		group = group,

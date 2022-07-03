@@ -11,7 +11,7 @@ use({
   "sei40kr/fcitx5.nvim",
   event = { "InsertEnter *", "CmdlineEnter *" },
   config = function()
-    require("fcitx5").setup_autocmds()
+    require("fcitx5").setup()
   end
 })
 ```
