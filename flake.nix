@@ -13,7 +13,7 @@
       in
       {
         packages = {
-          fcitx5-nvim = pkgs.callPackage ./packages/fcitx5-nvim { };
+          auto-im-nvim = pkgs.callPackage ./packages/auto-im-nvim { };
         };
 
         devShell = pkgs.mkShell {
@@ -21,9 +21,9 @@
             (pkgs.neovim.override {
               configure = {
                 customRC = ''
-                  lua require("fcitx5").setup()
+                  lua require("auto-im").setup()
                 '';
-                packages.myVimPackage.start = [ self.packages.${system}.fcitx5-nvim ];
+                packages.myVimPackage.start = [ self.packages.${system}.auto-im-nvim ];
               };
             })
           ];

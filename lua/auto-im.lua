@@ -17,7 +17,7 @@ function M.inactivate()
 end
 
 function M.setup()
-	local group = vim.api.nvim_create_augroup("fcitx5_nvim", {})
+	local group = vim.api.nvim_create_augroup("auto_im", {})
 	vim.api.nvim_create_autocmd({ "InsertLeave", "CmdlineLeave" }, {
 		group = group,
 		pattern = { "*" },

@@ -1,6 +1,6 @@
-# fcitx5.nvim
+# auto-im.nvim
 
-Inactivate the Fcitx5 IM on leaving insert mode 
+Inactivate IM on leaving insert/cmdline mode 
 
 ## Installation
 
@@ -8,10 +8,10 @@ Inactivate the Fcitx5 IM on leaving insert mode
 
 ```lua
 use({ 
-  "sei40kr/fcitx5.nvim",
+  "sei40kr/auto-im.nvim",
   event = { "InsertEnter *", "CmdlineEnter *" },
   config = function()
-    require("fcitx5").setup()
+    require("auto-im").setup()
   end
 })
 ```
